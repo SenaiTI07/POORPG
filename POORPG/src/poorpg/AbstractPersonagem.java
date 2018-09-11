@@ -12,20 +12,20 @@ package poorpg;
 public abstract class AbstractPersonagem
         implements IPersonagem {
 
-    int tipo;
-    int hp;
-  
-    private int forca, destreza, inteligencia;
+    private int tipo, hp, forca, destreza, inteligencia, level;
     private String nome;
 
-    public AbstractPersonagem(int tipo, int hp, int forca, int destreza, int inteligencia, String nome) {
+    public AbstractPersonagem(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
         this.tipo = tipo;
         this.hp = hp;
         this.forca = forca;
         this.destreza = destreza;
         this.inteligencia = inteligencia;
         this.nome = nome;
+        this.level = level;
     }
+
+
 
     @Override
     public boolean atacar(int atr1, int atr2) {
@@ -46,7 +46,7 @@ public abstract class AbstractPersonagem
     public void setTipo(int tipo) {
         this.tipo = tipo;
     }
-    
+
     @Override
     public int getHP() {
         return this.hp;
@@ -96,6 +96,17 @@ public abstract class AbstractPersonagem
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    @Override
+    public int getLevel() {
+        return this.level;
+    }
+
+    @Override
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
 
 
 
