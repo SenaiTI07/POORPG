@@ -98,16 +98,6 @@ public abstract class AbstractPersonagem
     }
 
     @Override
-    public int getTipo() {
-        return this.tipo;
-    }
-
-    @Override
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
-
-    @Override
     public int getLevel() {
         return this.level;
     }
