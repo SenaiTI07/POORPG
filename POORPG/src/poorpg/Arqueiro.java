@@ -20,9 +20,5 @@ public class Arqueiro extends AbstractPersonagem {
         super(tipo, hp, forca, destreza, inteligencia, nome);
     }
 
-    @Override
-    public boolean atacar() {
-        return true;
-        
-    }  
+    
 }
