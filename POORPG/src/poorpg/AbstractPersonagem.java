@@ -25,8 +25,8 @@ public abstract class AbstractPersonagem
         this.level = level;
     }
 
-    
-    
+
+
     @Override
     public boolean atacar(int atr1, int atr2) {
         int aux = (int)(atr1 / 10) + (atr2 / 10);
@@ -46,7 +46,7 @@ public abstract class AbstractPersonagem
     public void setTipo(int tipo) {
         this.tipo = tipo;
     }
-    
+
     @Override
     public int getHP() {
         return this.hp;
@@ -107,7 +107,7 @@ public abstract class AbstractPersonagem
         this.level = level;
     }
 
-    
+
 
 
 }
