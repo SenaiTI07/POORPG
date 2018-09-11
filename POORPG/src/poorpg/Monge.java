@@ -17,7 +17,11 @@ public class Monge extends AbstractPersonagem {
         super(tipo, hp, forca, destreza, inteligencia, level, nome);
     }
 
-
+    
+    
+    public void curaPropia(){
+        
+    }
 
 
 
