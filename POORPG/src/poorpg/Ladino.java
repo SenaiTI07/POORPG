@@ -13,16 +13,16 @@ public class Ladino extends AbstractPersonagem{
     
     private int backStab;
     private int invisibility;
-    
-    
-    public Ladino(int tipo, int hp, int forca, int destreza, int inteligencia, String nome) {
-        super(tipo, hp, forca, destreza, inteligencia, nome);
-    }
 
-    @Override
-    public boolean atacar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Ladino(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
+        super(tipo, hp, forca, destreza, inteligencia, level, nome);
     }
+    
+    
+
+
+    
+   
     
     
 }
