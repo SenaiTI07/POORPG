@@ -13,9 +13,11 @@ public class Monge extends AbstractPersonagem {
     
     private int foco;
 
-    public Monge(int tipo, int hp, int forca, int destreza, int inteligencia, String nome) {
-        super(tipo, hp, forca, destreza, inteligencia, nome);
+    public Monge(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
+        super(tipo, hp, forca, destreza, inteligencia, level, nome);
     }
+
+
 
 
 
