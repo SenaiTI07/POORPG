@@ -29,6 +29,6 @@ public interface IPersonagem {
     void setDestreza();
     int getInteligencia(int inteligencia);
     void setInteligencia();
-    int getTipo(int tipo);
-    void setTipo();
+    int getTipo();
+    void setTipo(int tipo);
 }
