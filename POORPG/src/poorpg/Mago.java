@@ -9,29 +9,18 @@ package poorpg;
  *
  * @author senai
  */
-public class Guerreiro extends AbstractPersonagem {
+public abstract class Mago extends AbstractPersonagem {
 
-    int forcaEspada;
-    int block;
-
-    public Guerreiro(int forcaEspada, int block, int tipo, int hp, int forca, int destreza, int inteligencia, String nome) {
+    
+    private int mana, enchanter, magic;
+      
+    
+    public Mago(int tipo, int hp, int forca, int destreza, int inteligencia, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, nome);
-        this.forcaEspada = forcaEspada;
-        this.block = block;
     }
     
-    
-
     @Override
     public boolean atacar() {
-       return true;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
- 
- 
-
-
-    
-    
-    
 }

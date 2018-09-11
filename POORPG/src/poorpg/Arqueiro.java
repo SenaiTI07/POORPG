@@ -5,19 +5,24 @@
  */
 package poorpg;
 
+import java.util.Random;
+
 /**
  *
- * @author User
+ * @author senai
  */
-public class Paladino extends AbstractPersonagem {   
-
-    public Paladino(int tipo, int hp, int forca, int destreza, int inteligencia, String nome) {
+public class Arqueiro extends AbstractPersonagem {
+    
+    private int tirosRapidos;
+    private int penetracaoMagica;
+    
+    public Arqueiro(int tipo, int hp, int forca, int destreza, int inteligencia, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, nome);
-    }     
+    }
 
     @Override
     public boolean atacar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+        return true;
+        
+    }  
 }
