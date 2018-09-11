@@ -20,18 +20,8 @@ public class Guerreiro extends AbstractPersonagem {
         this.block = block;
     }
     
-    
-
     @Override
     public boolean atacar() {
        return true;
     }
-
- 
- 
-
-
-    
-    
-    
 }
