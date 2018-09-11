@@ -13,11 +13,13 @@ import java.util.Random;
  */
 public class Arqueiro extends AbstractPersonagem {
     
-    private int tirosRapidos;
-    private int penetracaoMagica;
+    int evasao;
+    int penetracaoMagica;
 
     public Arqueiro(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, level, nome);
+        this.evasao = evasao;
+        this.penetracaoMagica = penetracaoMagica;
     }
     
 
