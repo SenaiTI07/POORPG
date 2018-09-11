@@ -17,10 +17,6 @@ public class Monge extends AbstractPersonagem {
         super(tipo, hp, forca, destreza, inteligencia, nome);
     }
 
-    @Override
-    public boolean atacar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 
 
