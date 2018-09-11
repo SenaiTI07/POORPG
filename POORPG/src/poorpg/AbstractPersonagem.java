@@ -9,8 +9,9 @@ package poorpg;
  *
  * @author senai
  */
-public abstract class AbstractPersonagem 
+public abstract class AbstractPersonagem
         implements IPersonagem {
+
     private int tipo, hp, forca, destreza, inteligencia;
     private String nome;
 
@@ -70,6 +71,5 @@ public abstract class AbstractPersonagem
     public void setNome(String nome) {
         this.nome = nome;
     }
-       
-    
+
 }
