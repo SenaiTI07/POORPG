@@ -24,9 +24,11 @@ public class Guerreiro extends AbstractPersonagem {
     
     public void corteEspada() {
      
+        
     }
     
     public void block(){
+       
         
     }
 
