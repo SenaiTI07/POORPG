@@ -18,38 +18,9 @@ public abstract class Mago extends AbstractPersonagem {
     public Mago(int tipo, int hp, int forca, int destreza, int inteligencia, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, nome);
     }
-
-    public int getMana() {
-        return mana;
-    }
-
-    public void setMana(int mana) {
-        this.mana = mana;
-    }
-
-    public int getEnchanter() {
-        return enchanter;
-    }
-
-    public void setEnchanter(int enchanter) {
-        this.enchanter = enchanter;
-    }
-
-    public int getMagic() {
-        return magic;
-    }
-
-    public void setMagic(int magic) {
-        this.magic = magic;
-    }
-
     
-    public void TacarMagia (int TacarMagia){  
-        
+    @Override
+    public boolean atacar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public void AutoCura(){     
-    }
-    
-    
 }
