@@ -19,16 +19,16 @@ public interface IPersonagem {
     int PALADINO = 6;
     int CLERIGO = 7;
     boolean atacar();
-    String getNome();
+    String getNome(String nome);
     void setNome(String nome);
-    int getHP();
-    void setHP(int hp);
-    int getForca();
-    void setForca(int forca);
-    int getDestreza();
-    void setDestreza(int destreza);
-    int getInteligencia();
-    void setInteligencia(int inteligencia);
-    int getTipo();
+    int getHP(int hp);
+    void setHP();
+    int getForca(int forca);
+    void setForca();
+    int getDestreza(int destreza);
+    void setDestreza();
+    int getInteligencia(int inteligencia);
+    void setInteligencia();
+    int getTipo(int tipo);
     void setTipo();
 }
