@@ -14,7 +14,7 @@ public abstract class AbstractPersonagem
 
     int tipo;
     int hp;
-
+  
     private int forca, destreza, inteligencia;
     private String nome;
 
