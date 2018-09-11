@@ -9,23 +9,19 @@ package poorpg;
  *
  * @author senai
  */
-public class Guerreiro extends AbstractPersonagem {
+public class Monge extends AbstractPersonagem {
+    
+    private int foco;
 
-    int forcaEspada;
-    int block;
-
-    public Guerreiro(int forcaEspada, int block, int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
+    public Monge(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, level, nome);
-        this.forcaEspada = forcaEspada;
-        this.block = block;
     }
 
 
 
 
-    
-    
 
-  
+
+
 
 }
