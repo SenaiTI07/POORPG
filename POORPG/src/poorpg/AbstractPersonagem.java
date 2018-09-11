@@ -28,6 +28,16 @@ public abstract class AbstractPersonagem
     }
 
     @Override
+    public boolean atacar(int atr1, int atr2) {
+        int aux = (int)(atr1 / 10) + (atr2 / 10);
+        if (1 + aux + (int)Math.random() * (100 - aux - 1) > 50) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
     public int getTipo() {
         return tipo;
     }
@@ -36,10 +46,10 @@ public abstract class AbstractPersonagem
     public void setTipo(int tipo) {
         this.tipo = tipo;
     }
-
+    
     @Override
     public int getHP() {
-        return hp;
+        return this.hp;
     }
 
     @Override
@@ -87,6 +97,6 @@ public abstract class AbstractPersonagem
         this.nome = nome;
     }
 
-   
+
 
 }

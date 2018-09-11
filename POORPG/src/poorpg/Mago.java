@@ -9,7 +9,7 @@ package poorpg;
  *
  * @author senai
  */
-public abstract class Mago extends AbstractPersonagem {
+public class Mago extends AbstractPersonagem {
 
     
     private int mana, enchanter, magic;
@@ -21,6 +21,6 @@ public abstract class Mago extends AbstractPersonagem {
     
     @Override
     public boolean atacar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return true;
     }
 }

@@ -18,7 +18,7 @@ public interface IPersonagem {
     int NECROMANTE = 5;
     int PALADINO = 6;
     int CLERIGO = 7;
-    boolean atacar();
+    boolean atacar(int x, int y);
     String getNome();
     void setNome(String nome);
     int getHP();
