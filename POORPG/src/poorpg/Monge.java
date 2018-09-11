@@ -5,6 +5,8 @@
  */
 package poorpg;
 
+import poorpg.batalha.ataque.AbstractAtaque;
+
 /**
  *
  * @author senai
@@ -17,10 +19,21 @@ public class Monge extends AbstractPersonagem {
         super(tipo, hp, forca, destreza, inteligencia, level, nome);
     }
 
+
     
     
     public void curaPropia(){
         
+    }
+
+    @Override
+    public AbstractAtaque atacar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int receberAtaque(AbstractAtaque a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 
