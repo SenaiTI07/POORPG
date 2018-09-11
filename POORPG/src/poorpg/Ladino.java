@@ -13,11 +13,13 @@ public class Ladino extends AbstractPersonagem{
     
     private int backStab;
     private int invisibility;
-    
-    
-    public Ladino(int tipo, int hp, int forca, int destreza, int inteligencia, String nome) {
-        super(tipo, hp, forca, destreza, inteligencia, nome);
+
+    public Ladino(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
+        super(tipo, hp, forca, destreza, inteligencia, level, nome);
     }
+    
+    
+
 
     
    
