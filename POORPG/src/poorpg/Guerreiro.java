@@ -19,9 +19,11 @@ public class Guerreiro extends AbstractPersonagem {
         this.forcaEspada = forcaEspada;
         this.block = block;
     }
+
+
     
-    @Override
-    public boolean atacar() {
-       return true;
-    }
+
+
+  
+
 }

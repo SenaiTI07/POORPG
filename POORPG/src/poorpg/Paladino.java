@@ -9,15 +9,9 @@ package poorpg;
  *
  * @author User
  */
-public class Paladino extends AbstractPersonagem {   
+public class Paladino extends AbstractPersonagem {
 
     public Paladino(int tipo, int hp, int forca, int destreza, int inteligencia, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, nome);
-    }     
-
-    @Override
-    public boolean atacar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 }
