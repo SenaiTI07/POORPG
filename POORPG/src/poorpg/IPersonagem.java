@@ -5,6 +5,8 @@
  */
 package poorpg;
 
+import poorpg.batalha.ataque.AbstractAtaque;
+
 /**
  *
  * @author senai
@@ -18,7 +20,17 @@ public interface IPersonagem {
     int NECROMANTE = 5;
     int PALADINO = 6;
     int CLERIGO = 7;
-    boolean atacar(int x, int y);
+    /**
+     * Cria um AbstractAtaque para alguma batalha
+     * @return 
+     */
+    AbstractAtaque atacar();
+    /**
+     * @param recebe um AbstractAtaque a
+     * @return quantidade de dano 
+     */
+    int receberAtaque(AbstractAtaque a);
+    
     String getNome();
     void setNome(String nome);
     int getHP();
