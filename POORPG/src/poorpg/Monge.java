@@ -10,6 +10,8 @@ package poorpg;
  * @author senai
  */
 public class Monge extends AbstractPersonagem {
+    
+    private int foco;
 
     public Monge(int tipo, int hp, int forca, int destreza, int inteligencia, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, nome);
@@ -19,6 +21,7 @@ public class Monge extends AbstractPersonagem {
     public boolean atacar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
 
 
 
