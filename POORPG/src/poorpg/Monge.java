@@ -25,6 +25,7 @@ public class Monge extends AbstractPersonagem {
     
     public Monge(){
         super(MONGE, 85, 6, 9, 10, 1, "gregão");
+        this.foco = 6;
     }
 
     public int curaPropia() {
