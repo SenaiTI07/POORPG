@@ -3,14 +3,14 @@ package poorpg;
 import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.batalha.acao.AtaqueFisico;
 
-
-
 public class Paladino extends AbstractPersonagem {
 
+    private static final int CURA = 10;
+    
     private static final int HP = 100;
     private static final int FORCA = 8;
     private static final int DESTREZA = 3;
-    private static final int INTELIGENCIA = 5;
+    private static final int INTELIGENCIA = 6;
     private static final int LEVEL = 1;
     private static final String NOME = "Lanches";
 
@@ -19,7 +19,7 @@ public class Paladino extends AbstractPersonagem {
     }
 
     public Paladino() {
-        super(Paladino.PALADINO, Paladino.HP, Paladino.FORCA, Paladino.DESTREZA, Paladino.INTELIGENCIA, Paladino.LEVEL, Paladino.NOME);
+        super(PALADINO, Paladino.HP, Paladino.FORCA, Paladino.DESTREZA, Paladino.INTELIGENCIA, Paladino.LEVEL, Paladino.NOME);
     }
 
     @Override
@@ -31,5 +31,4 @@ public class Paladino extends AbstractPersonagem {
     public int receberAtaque(AbstractAtaque a) {
         return a.getQuantidade() - this.getForca();
     }
-
 }
