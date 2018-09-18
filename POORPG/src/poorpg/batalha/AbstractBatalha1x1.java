@@ -45,8 +45,10 @@ implements IBatalha1x1{
         switch(this.vez){
             case IBatalha1x1.PERSONAGEM1:
                 this.vez = IBatalha1x1.PERSONAGEM2;
+                break;
             case IBatalha1x1.PERSONAGEM2:
                 this.vez = IBatalha1x1.PERSONAGEM1;
+                break;
         }
         return this.vez;
     }
