@@ -14,6 +14,14 @@ import poorpg.batalha.acao.AtaqueFisico;
  */
 public class Monge extends AbstractPersonagem {
 
+    public int getFoco() {
+        return foco;
+    }
+
+    public void setFoco(int foco) {
+        this.foco = foco;
+    }
+
     private int foco;
 
 
