@@ -27,7 +27,7 @@ public class Guerreiro extends AbstractPersonagem {
     @Override
     public AbstractAtaque atacar( ) {
 
-        return new AtaqueFisico(getForca() - getHP()/2);
+        return new AtaqueFisico((getForca()/2) + (getDestreza()/2)*2);
         
     }
 
@@ -41,7 +41,7 @@ public class Guerreiro extends AbstractPersonagem {
 
 
     public Guerreiro(){
-        super(GUERREIRO,100,6,5,2,5,"DesertoNegro");
+        super(GUERREIRO,100,6,6,2,5,"DesertoNegro");
     }
 
 
