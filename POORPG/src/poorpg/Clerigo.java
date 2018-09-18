@@ -12,8 +12,6 @@ public class Clerigo extends AbstractPersonagem {
     public Clerigo(String nome) {
         super(GUERREIRO, 10, 5, 10, 16, 1, nome);
     }
-    
-    
 
     public void Curar(AbstractPersonagem personagem) {
         personagem.setHP(personagem.getHP() + (int)(this.getInteligencia() * 3.5)) ;
