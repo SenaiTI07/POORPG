@@ -8,6 +8,7 @@ package poorpg;
 import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.batalha.acao.AtaqueFisico;
 import poorpg.batalha.acao.AtaqueMagico;
+import poorpg.batalha.acao.IAtaque;
 
 /**
  *
@@ -42,7 +43,7 @@ public class Mago extends AbstractPersonagem {
         return new AtaqueMagico(this.getInteligencia() - this.getDestreza());
     }
 
-    public int receberAtaque(AbstractAtaque a) {
+    public int receberAtaque(IAtaque a) {
         return a.getQuantidade() - (this.getForca() - this.getHP()); 
     }
 }
