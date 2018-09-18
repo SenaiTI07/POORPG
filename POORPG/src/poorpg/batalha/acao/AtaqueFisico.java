@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poorpg.batalha;
-
-import poorpg.batalha.acao.AbstractAtaque;
-import poorpg.AbstractPersonagem;
+package poorpg.batalha.acao;
 
 /**
  *
  * @author senai
  */
-public interface IBatalha1x1 extends IBatalha{
-    int PERSONAGEM1 = 0;
-    int PERSONAGEM2 = 1;
+public class AtaqueFisico extends AbstractAtaque{
+    
+    public AtaqueFisico(int quantidade) {
+        super(IAtaque.FISICO, quantidade);
+    }
     
 }

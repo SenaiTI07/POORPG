@@ -5,7 +5,7 @@
  */
 package poorpg.batalha;
 
-import poorpg.batalha.ataque.AbstractAtaque;
+import poorpg.batalha.acao.AbstractAtaque;
 import java.util.Random;
 import poorpg.AbstractPersonagem;
 import poorpg.IPersonagem;
