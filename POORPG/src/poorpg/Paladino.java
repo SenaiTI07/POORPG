@@ -6,7 +6,7 @@ import poorpg.batalha.acao.AtaqueFisico;
 public class Paladino extends AbstractPersonagem {
 
     private static final int CURA = 10;
-    
+
     private static final int HP = 100;
     private static final int FORCA = 8;
     private static final int DESTREZA = 3;
@@ -29,6 +29,8 @@ public class Paladino extends AbstractPersonagem {
 
     @Override
     public int receberAtaque(AbstractAtaque a) {
-        return a.getQuantidade() - this.getForca();
+        int dano = a.getQuantidade() - this.getForca();
+        this.setHP(this.getHP() - dano);
+        return dano;
     }
 }
