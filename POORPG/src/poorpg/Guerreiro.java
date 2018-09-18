@@ -5,6 +5,7 @@
  */
 package poorpg;
 
+import java.util.Random;
 import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.batalha.acao.AtaqueFisico;
 import poorpg.batalha.acao.IAtaque;
@@ -27,7 +28,7 @@ public class Guerreiro extends AbstractPersonagem {
     @Override
     public AbstractAtaque atacar( ) {
 
-        return new AtaqueFisico((getForca()/2) + (getDestreza()/2)*2);
+        return new AtaqueFisico(((getForca()/2) + (getDestreza()/2))*2);
         
     }
 
@@ -42,6 +43,16 @@ public class Guerreiro extends AbstractPersonagem {
 
     public Guerreiro(){
         super(GUERREIRO,100,6,6,2,5,"DesertoNegro");
+    }
+
+    @Override
+    public int getDef(int tipoAtaque) {
+       int defesa;
+        Random math = new Random();
+            
+            defesa = this.getForca()/2+(int)math.nextInt(10)+(math.nextInt(10) * this.getDestreza());
+        
+        return defesa;
     }
 
 
