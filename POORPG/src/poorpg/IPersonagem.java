@@ -6,6 +6,7 @@
 package poorpg;
 
 import poorpg.batalha.acao.AbstractAtaque;
+import poorpg.batalha.acao.IAtaque;
 
 /**
  *
@@ -29,7 +30,7 @@ public interface IPersonagem {
      * @param recebe um AbstractAtaque a
      * @return quantidade de dano 
      */
-    int receberAtaque(AbstractAtaque a);
+    int receberAtaque(IAtaque a);
     
     String getNome();
     void setNome(String nome);

@@ -7,6 +7,7 @@ package poorpg;
 
 import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.batalha.acao.AtaqueFisico;
+import poorpg.batalha.acao.IAtaque;
 
 /**
  *
@@ -46,8 +47,11 @@ public class Monge extends AbstractPersonagem {
     }
 
     @Override
-    public int receberAtaque(AbstractAtaque a) {
-        return a.getQuantidade() - this.getForca();
+    public int receberAtaque(IAtaque a) {
+        
+        int dano = a.getQuantidade() - this.getForca();
+        this.setHP(this.getHP() - dano);
+        return dano;
     }
 
 }

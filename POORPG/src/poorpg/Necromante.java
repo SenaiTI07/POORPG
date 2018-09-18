@@ -2,6 +2,7 @@ package poorpg;
 
 import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.batalha.acao.AtaqueMagico;
+import poorpg.batalha.acao.IAtaque;
 
 public class Necromante extends AbstractPersonagem {
 
@@ -31,7 +32,7 @@ public class Necromante extends AbstractPersonagem {
     }
 
     @Override
-    public int receberAtaque(AbstractAtaque a) {
+    public int receberAtaque(IAtaque a) {
         int dano = a.getQuantidade() - this.getForca();
         this.setHP(this.getHP() - dano);
         return dano;

@@ -6,6 +6,7 @@
 package poorpg;
 
 import poorpg.batalha.acao.AbstractAtaque;
+import poorpg.batalha.acao.IAtaque;
 
 /**
  *
@@ -33,7 +34,7 @@ public abstract class AbstractPersonagem
     public abstract AbstractAtaque atacar();
 
     @Override
-    public abstract int receberAtaque(AbstractAtaque a);
+    public abstract int receberAtaque(IAtaque a);
     
     @Override
     public int getTipo() {
