@@ -25,15 +25,18 @@ public class Guerreiro extends AbstractPersonagem {
 
     @Override
     public AbstractAtaque atacar( ) {
-        
+
         return new AtaqueFisico(getForca() - getHP()/2);
         
     }
 
     
     public int receberAtaque(AbstractAtaque a) {
-           
-        return  a.getQuantidade() - (this.getHP() -( this.getForca() - block));
+               
+        int dano = a.getQuantidade() - (this.getHP() -( this.getForca() - block));
+        this.setHP(this.getHP() - dano); 
+        return  dano;
+         
     }
 
 
