@@ -34,6 +34,6 @@ public class Necromante extends AbstractPersonagem {
 
     @Override
     public int receberAtaque(AbstractAtaque a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return a.getQuantidade() - this.getForca();
     }
 }
