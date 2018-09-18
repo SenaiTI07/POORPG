@@ -6,6 +6,8 @@
 package poorpg;
 
 import java.util.Random;
+import poorpg.batalha.ataque.AbstractAtaque;
+import poorpg.batalha.ataque.AtaqueFisico;
 
 /**
  *
@@ -21,8 +23,18 @@ public class Arqueiro extends AbstractPersonagem {
         this.evasao = evasao;
         this.penetracaoMagica = penetracaoMagica;
     }
-    
 
+    @Override
+    public AbstractAtaque atacar() {
+        return new AtaqueFisico(this.getDestreza() * this.getForca()); 
+    }
 
+    @Override
+    public int receberAtaque(AbstractAtaque a) {
+         return a.getQuantidade() - (this.getDestreza() * (this.getHP() / 15));
+    }
     
+    public void evasao(AbstractPersonagem personagem){
+        personagem.setHP(personagem.getHP() * (int)(this.getDestreza() * 100)) ;
+    }
 }
