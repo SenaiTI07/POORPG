@@ -40,6 +40,6 @@ public class Arqueiro extends AbstractPersonagem {
     }
     
     public Arqueiro(){
-        super(ARQUEIRO,100,8,12,6,10,"SoulBeast");
+        super(ARQUEIRO,100,6,10,4,10,"SoulBeast");
     }
 }
