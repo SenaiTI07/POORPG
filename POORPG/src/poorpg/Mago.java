@@ -25,7 +25,7 @@ public class Mago extends AbstractPersonagem {
     }
 
     public Mago() {
-        super(1, 50, 56, 48, 56, 40, "Obelisco");
+        super(2, 50, 56, 48, 56, 40, "Obelisco");
         this.mana = mana;
     }
 
