@@ -5,15 +5,16 @@
  */
 package poorpg.batalha;
 
-import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.AbstractPersonagem;
+import poorpg.batalha.acao.AbstractAtaque;
 
 /**
  *
  * @author senai
  */
-public interface IBatalha1x1 extends IBatalha{
-    int PERSONAGEM1 = 0;
-    int PERSONAGEM2 = 1;
-    
+public interface IBatalha {
+    AbstractPersonagem getPersonagem(int personagem);
+    int getVez();
+    void consumirVez(AbstractAtaque a);
+    boolean verificaFimBatalha();
 }

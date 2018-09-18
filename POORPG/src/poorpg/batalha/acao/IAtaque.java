@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poorpg.batalha.ataque;
+package poorpg.batalha.acao;
 
 /**
  *
  * @author senai
  */
-public interface IAtaque {
+public interface IAtaque extends IAcao {
+    
     int FISICO = 0;
     int MAGICO = 1;
     
-    int getTipo();
+    int getTipoAtaque();
     int getQuantidade();
 }

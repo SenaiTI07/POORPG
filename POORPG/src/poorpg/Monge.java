@@ -5,7 +5,7 @@
  */
 package poorpg;
 
-import poorpg.batalha.ataque.AbstractAtaque;
+import poorpg.batalha.acao.AbstractAtaque;
 
 /**
  *
