@@ -5,8 +5,8 @@
  */
 package poorpg;
 
-import poorpg.batalha.ataque.AbstractAtaque;
-import poorpg.batalha.ataque.AtaqueFisico;
+import poorpg.batalha.acao.AbstractAtaque;
+import poorpg.batalha.acao.AtaqueFisico;
 
 /**
  *
@@ -37,6 +37,9 @@ public class Guerreiro extends AbstractPersonagem {
     }
 
 
+    public Guerreiro(){
+        super(0,100,60,50,20,5,"DesertoNegro");
+    }
 
 
     

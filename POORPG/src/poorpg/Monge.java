@@ -22,7 +22,7 @@ public class Monge extends AbstractPersonagem {
     }
     
     public Monge(){
-        super(1, 85, 60, 90, 100, 1, "gregão");
+        super(0, 85, 60, 90, 100, 1, "gregão");
     }
 
     public void curaPropia() {
