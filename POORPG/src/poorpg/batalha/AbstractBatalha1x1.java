@@ -10,6 +10,7 @@ import java.util.Random;
 import poorpg.AbstractPersonagem;
 import poorpg.IPersonagem;
 import poorpg.batalha.acao.IAcao;
+import poorpg.batalha.acao.IAtaque;
 
 /**
  *
@@ -64,11 +65,14 @@ implements IBatalha1x1{
     public void consumirVez(IAcao a) {
         switch(this.vez){
             case IBatalha1x1.PERSONAGEM1:
-                this.p2.receberAtaque(a);
+                this.p2.receberAtaque((IAtaque)a);
+                break;
             case IBatalha1x1.PERSONAGEM2:
-                this.p1.receberAtaque(a);
+                this.p1.receberAtaque((IAtaque)a);
+                break;
         }
         mudarVez();
     }
+
     
 }
