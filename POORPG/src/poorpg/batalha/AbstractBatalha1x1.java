@@ -9,6 +9,7 @@ import poorpg.batalha.acao.AbstractAtaque;
 import java.util.Random;
 import poorpg.AbstractPersonagem;
 import poorpg.IPersonagem;
+import poorpg.batalha.acao.IAcao;
 
 /**
  *
@@ -60,7 +61,7 @@ implements IBatalha1x1{
     }
 
     @Override
-    public void consumirVez(AbstractAtaque a) {
+    public void consumirVez(IAcao a) {
         switch(this.vez){
             case IBatalha1x1.PERSONAGEM1:
                 this.p2.receberAtaque(a);
