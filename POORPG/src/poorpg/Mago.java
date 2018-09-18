@@ -16,12 +16,11 @@ import poorpg.batalha.acao.IAtaque;
  */
 public class Mago extends AbstractPersonagem {
 
-    private int mana, enchanter, magic;
+    private int mana, magic;
 
     public Mago(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, level, nome);
         this.mana = mana;
-        this.enchanter = enchanter;
         this.magic = magic;
     }
 
@@ -40,9 +39,13 @@ public class Mago extends AbstractPersonagem {
     }
 
     public AbstractAtaque atacar() {
-        return new AtaqueMagico(this.getInteligencia() - this.getDestreza());
+        return new AtaqueMagico(((this.mana) + (this.getForca() / 2)) * 2);
     }
 
+     public int Defesa(int tipoAtaque){
+        return (magic /2 + (int) math.round(math.randow() * magic ));
+    }
+   
     public int receberAtaque(IAtaque a) {
         int dano = a.getQuantidade() - (this.getForca());
         if(dano >= 0){
