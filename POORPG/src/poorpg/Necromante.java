@@ -22,7 +22,7 @@ public class Necromante extends AbstractPersonagem {
     }
 
     public Necromante() {
-        super(NECROMANTE, 92, 5, 6, 10, 1, "Nekrottério");
+        super(NECROMANTE, 92, 5, 6, 10, 3, "Nekrottério");
         this.mana = 9;
     }
 
@@ -36,5 +36,16 @@ public class Necromante extends AbstractPersonagem {
         int dano = a.getQuantidade() - this.getForca();
         this.setHP(this.getHP() - dano);
         return dano;
+    }
+
+    @Override
+    public int getDef(int tipoAtaque) {
+        if (tipoAtaque == IAtaque.FISICO){
+            int def = (this.getForca() / 2 +(int) Math.round(Math.random() * this.getLevel()));
+            return def;
+        }
+        
+        int def = (this.getInteligencia() / 2 +(int)Math.round(Math.random() * this.getDestreza()));
+        return def;
     }
 }
