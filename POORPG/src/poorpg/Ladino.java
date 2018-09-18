@@ -5,6 +5,7 @@
  */
 package poorpg;
 
+import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.batalha.acao.AtaqueFisico;
 import poorpg.batalha.ataque.AbstractAtaque;
 
@@ -32,13 +33,14 @@ public class Ladino extends AbstractPersonagem{
       return new AtaqueFisico(this.getForca());  
     }
 
+    @Override
     public int receberAtaque(AbstractAtaque a) {
-        this.setHP(this.getHP() - a.getQuantidade);
+        this.setHP(this.getHP() - a.getQuantidade());
         return a.getQuantidade();
     }
-    
-    
 
+    
+   
     
     
    
