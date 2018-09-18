@@ -16,12 +16,12 @@ import poorpg.batalha.acao.IAtaque;
 public class Guerreiro extends AbstractPersonagem {
 
  
-    int block;
+  
 
     public Guerreiro( int block, int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, level, nome);
        
-        this.block = block;
+        
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Guerreiro extends AbstractPersonagem {
     @Override
     public int receberAtaque(IAtaque a) {
            
-        int dano = a.getQuantidade() - (this.getHP() -( this.getForca() - block));
+        int dano = a.getQuantidade() - this.getForca();
         this.setHP(this.getHP() - dano); 
         return  dano;
     }
