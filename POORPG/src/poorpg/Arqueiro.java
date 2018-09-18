@@ -39,6 +39,6 @@ public class Arqueiro extends AbstractPersonagem {
     }
     
     public Arqueiro(){
-        super(0,100,100,100,100,100,"Comi o>");
+        super(ARQUEIRO,100,100,100,100,100,"Comi o>");
     }
 }
