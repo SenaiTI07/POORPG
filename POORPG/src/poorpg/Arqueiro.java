@@ -8,6 +8,7 @@ package poorpg;
 import java.util.Random;
 import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.batalha.acao.AtaqueFisico;
+import poorpg.batalha.acao.IAtaque;
 
 /**
  *
@@ -30,7 +31,7 @@ public class Arqueiro extends AbstractPersonagem {
     }
 
     
-    public int receberAtaque(AbstractAtaque a) {
+    public int receberAtaque(IAtaque a) {
          return a.getQuantidade() - (this.getDestreza() - (this.getHP() / 15));
     }
     
@@ -39,6 +40,6 @@ public class Arqueiro extends AbstractPersonagem {
     }
     
     public Arqueiro(){
-        super(ARQUEIRO,100,100,100,100,100,"Comi o>");
+        super(ARQUEIRO,100,8,12,6,10,"Comi o>");
     }
 }

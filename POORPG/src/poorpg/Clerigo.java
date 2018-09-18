@@ -23,7 +23,8 @@ public class Clerigo extends AbstractPersonagem {
     }
 
     @Override
-    public int receberAtaque(AbstractAtaque a) {
+    public int receberAtaque(IAtaque a) {
+        this.setHP(this.getHP() - a.getQuantidade());
         return a.getQuantidade() - (this.getInteligencia() * (this.getDestreza() / 10));
     }
 

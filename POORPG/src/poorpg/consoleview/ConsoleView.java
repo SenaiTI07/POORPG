@@ -5,14 +5,18 @@
  */
 package poorpg.consoleview;
 
+import java.lang.reflect.Constructor;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import poorpg.AbstractPersonagem;
 import poorpg.batalha.Batalha1x1Generica;
 import poorpg.batalha.IBatalha;
 import poorpg.batalha.IBatalha1x1;
 import poorpg.batalha.acao.IAcao;
+import poorpg.*;
+import poorpg.batalha.IBatalha1x1;
 
 /**
  *
@@ -35,10 +39,14 @@ public class ConsoleView {
         Batalha1x1Generica batalha = 
                 new Batalha1x1Generica(p1, p2);
         do{
+            mostrarHP(batalha);
             mostrarVez(batalha);
             IAcao a = null;
             while(a == null){
                 a = pedirAcao(batalha);
+                if(a != null){
+                    batalha.consumirVez(a);
+                }
             }
         }while(!batalha.verificaFimBatalha());
     }
@@ -47,16 +55,20 @@ public class ConsoleView {
         System.out.println("Digite a classe de seu personagem " + n + ": ");
         String classe = sc.nextLine();
         Class<?> classePersonagem;
+        Constructor<?> construtor;
         AbstractPersonagem ap;
         try{
-            classePersonagem = Class.forName(classe); 
+            classePersonagem = Class.forName("poorpg."+classe); 
+            construtor = classePersonagem.getConstructor();
             ap = (AbstractPersonagem) classePersonagem.newInstance();
         } catch (ClassNotFoundException |
                 InstantiationException | 
-                IllegalAccessException ex) {
+                IllegalAccessException |
+                NoSuchMethodException |
+                SecurityException ex) {
             System.out.println("Classe não existente");
             return null;
-        }
+        } 
 
         return ap;
     }
@@ -80,5 +92,17 @@ public class ConsoleView {
                 break;
         }
         return a;
+    }
+    
+    private void mostrarHP(IBatalha b){
+        System.out.println( "HP " +
+                b.getPersonagem(IBatalha1x1.PERSONAGEM1) + 
+                        " =" + 
+                b.getPersonagem(IBatalha1x1.PERSONAGEM1).getHP());
+        System.out.println( "HP " +
+                b.getPersonagem(IBatalha1x1.PERSONAGEM2) + 
+                        " =" + 
+                b.getPersonagem(IBatalha1x1.PERSONAGEM2).getHP());
+    
     }
 }
