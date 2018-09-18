@@ -49,6 +49,7 @@ public class ConsoleView {
                 }
             }
         }while(!batalha.verificaFimBatalha());
+        mostrarHP(batalha);
     }
 
     private AbstractPersonagem criarPersonagem(int n) {

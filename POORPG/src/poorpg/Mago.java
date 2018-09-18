@@ -44,6 +44,10 @@ public class Mago extends AbstractPersonagem {
     }
 
     public int receberAtaque(IAtaque a) {
-        return a.getQuantidade() - (this.getForca() - this.getHP()); 
+        int dano = a.getQuantidade() - (this.getForca());
+        if(dano >= 0){
+            setHP(getHP()-dano);
+        }
+        return dano;
     }
 }

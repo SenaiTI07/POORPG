@@ -22,19 +22,19 @@ public class Necromante extends AbstractPersonagem {
     }
 
     public Necromante() {
-        super(NECROMANTE, 95, 5, 6, 10, 1, "Kel'Thuzad");
+        super(NECROMANTE, 92, 5, 6, 10, 1, "Necrotério");
         this.mana = 9;
     }
 
-
-
     @Override
     public AbstractAtaque atacar() {
-        return new AtaqueMagico((this.getInteligencia() / 2) + (this.getMana() / 2));
+        return new AtaqueMagico(((this.getInteligencia() / 2) + (this.getMana() / 2)) * 2);
     }
 
     @Override
     public int receberAtaque(IAtaque a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int dano = a.getQuantidade() - this.getForca();
+        this.setHP(this.getHP() - dano);
+        return dano;
     }
 }

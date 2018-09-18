@@ -26,21 +26,22 @@ public class Guerreiro extends AbstractPersonagem {
 
     @Override
     public AbstractAtaque atacar( ) {
-        
+
         return new AtaqueFisico(getForca() - getHP()/2);
         
     }
 
-    
     @Override
     public int receberAtaque(IAtaque a) {
            
-        return  a.getQuantidade() - (this.getHP() -( this.getForca() - block));
+        int dano = a.getQuantidade() - (this.getHP() -( this.getForca() - block));
+        this.setHP(this.getHP() - dano); 
+        return  dano;
     }
 
 
     public Guerreiro(){
-        super(GUERREIRO,100,60,50,20,5,"DesertoNegro");
+        super(GUERREIRO,100,6,5,2,5,"DesertoNegro");
     }
 
 
