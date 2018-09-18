@@ -1,4 +1,3 @@
- ;
 package poorpg;
 
 import poorpg.batalha.acao.AbstractAtaque;
