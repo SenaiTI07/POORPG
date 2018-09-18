@@ -18,7 +18,7 @@ public class Guerreiro extends AbstractPersonagem {
  
   
 
-    public Guerreiro( int block, int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
+    public Guerreiro( int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, level, nome);
        
         
