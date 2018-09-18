@@ -5,6 +5,9 @@
  */
 package poorpg;
 
+import poorpg.batalha.acao.AbstractAtaque;
+import poorpg.batalha.acao.IAtaque;
+
 /**
  *
  * @author senai
@@ -19,5 +22,15 @@ public class Mago extends AbstractPersonagem {
         this.mana = mana;
         this.enchanter = enchanter;
         this.magic = magic;
+    }
+
+    @Override
+    public AbstractAtaque atacar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int receberAtaque(IAtaque a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

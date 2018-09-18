@@ -1,8 +1,8 @@
- ;
 package poorpg;
 
 import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.batalha.acao.AtaqueFisico;
+import poorpg.batalha.acao.IAtaque;
 
 
 
@@ -29,7 +29,7 @@ public class Paladino extends AbstractPersonagem {
     }
 
     @Override
-    public int receberAtaque(AbstractAtaque a) {
+    public int receberAtaque(IAtaque a) {
         return a.getQuantidade() - this.getForca();
     }
 

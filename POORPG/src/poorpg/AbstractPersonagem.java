@@ -6,6 +6,7 @@
 package poorpg;
 
 import poorpg.batalha.acao.AbstractAtaque;
+import poorpg.batalha.acao.IAcao;
 
 /**
  *

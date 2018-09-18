@@ -7,6 +7,7 @@ package poorpg.batalha;
 
 import poorpg.AbstractPersonagem;
 import poorpg.batalha.acao.AbstractAtaque;
+import poorpg.batalha.acao.IAcao;
 
 /**
  *
@@ -16,5 +17,6 @@ public interface IBatalha {
     AbstractPersonagem getPersonagem(int personagem);
     int getVez();
     void consumirVez(AbstractAtaque a);
+    void consumirVez(IAcao a);
     boolean verificaFimBatalha();
 }

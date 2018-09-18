@@ -9,6 +9,8 @@ import poorpg.batalha.acao.AbstractAtaque;
 import java.util.Random;
 import poorpg.AbstractPersonagem;
 import poorpg.IPersonagem;
+import poorpg.batalha.acao.IAcao;
+import poorpg.batalha.acao.IAtaque;
 
 /**
  *
@@ -45,8 +47,10 @@ implements IBatalha1x1{
         switch(this.vez){
             case IBatalha1x1.PERSONAGEM1:
                 this.vez = IBatalha1x1.PERSONAGEM2;
+                break;
             case IBatalha1x1.PERSONAGEM2:
                 this.vez = IBatalha1x1.PERSONAGEM1;
+                break;
         }
         return this.vez;
     }
@@ -58,12 +62,16 @@ implements IBatalha1x1{
     }
 
     @Override
-    public void consumirVez(AbstractAtaque a) {
-        switch(this.vez){
-            case IBatalha1x1.PERSONAGEM1:
-                this.p2.receberAtaque(a);
-            case IBatalha1x1.PERSONAGEM2:
-                this.p1.receberAtaque(a);
+    public void consumirVez(IAcao a) {
+        if(a.getTipoAcao() == IAcao.ATAQUE){
+            switch(this.vez){
+                case IBatalha1x1.PERSONAGEM1:
+                    this.p2.receberAtaque((IAtaque) a);
+                break;
+                case IBatalha1x1.PERSONAGEM2:
+                    this.p1.receberAtaque((IAtaque) a);
+                break;
+            }
         }
         mudarVez();
     }

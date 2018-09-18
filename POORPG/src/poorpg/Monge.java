@@ -6,6 +6,7 @@
 package poorpg;
 
 import poorpg.batalha.acao.AbstractAtaque;
+import poorpg.batalha.acao.IAtaque;
 
 /**
  *
@@ -35,7 +36,7 @@ public class Monge extends AbstractPersonagem {
     }
 
     @Override
-    public int receberAtaque(AbstractAtaque a) {
+    public int receberAtaque(IAtaque a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
