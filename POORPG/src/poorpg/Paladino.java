@@ -9,7 +9,7 @@ public class Paladino extends AbstractPersonagem {
     private static final int CURA = 10;
 
     private static final int HP = 100;
-    private static final int FORCA = 4;
+    private static final int FORCA = 6;
     private static final int DESTREZA = 2;
     private static final int INTELIGENCIA = 4;
     private static final int LEVEL = 1;
