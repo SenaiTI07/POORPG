@@ -3,6 +3,7 @@ package poorpg;
 import poorpg.batalha.acao.*;
 
 public class Clerigo extends AbstractPersonagem {
+
     private String nome;
 
     public Clerigo(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
@@ -24,8 +25,20 @@ public class Clerigo extends AbstractPersonagem {
 
     @Override
     public int receberAtaque(IAtaque a) {
-        this.setHP(this.getHP() - a.getQuantidade());
-        return a.getQuantidade() - (this.getInteligencia() * (this.getDestreza() / 10));
+        int dano = this.getDef(a.getTipoAtaque()) - a.getQuantidade();
+        this.setHP(this.getHP() - dano);
+        
+        return dano;
+    }
+    
+    @Override
+    public int getDef(int tipoAtaque) {
+        if (tipoAtaque == 0) {
+            return (this.getInteligencia() + (int)Math.round((Math.random() * this.getDestreza())));
+        } else {
+            return (this.getInteligencia() + (int)Math.round((Math.random() * this.getHP())));
+        }
+        
     }
 
 }
