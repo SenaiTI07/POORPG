@@ -10,10 +10,10 @@ public class Paladino extends AbstractPersonagem {
 
     private static final int HP = 100;
     private static final int FORCA = 8;
-    private static int DESTREZA = 3;
-    private static int INTELIGENCIA = 5;
-    private static int LEVEL = 1;
-    private static String NOME = "Lanches";
+    private static final int DESTREZA = 3;
+    private static final int INTELIGENCIA = 5;
+    private static final int LEVEL = 1;
+    private static final String NOME = "Lanches";
 
     public Paladino(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, level, nome);
