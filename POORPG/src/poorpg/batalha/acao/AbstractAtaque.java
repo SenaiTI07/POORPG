@@ -27,6 +27,11 @@ public class AbstractAtaque implements IAtaque {
     public int getQuantidade() {
         return quantidade;
     }
+
+    @Override
+    public int getTipoAcao() {
+        return IAcao.ATAQUE;
+    }
    
     
 }

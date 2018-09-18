@@ -66,7 +66,7 @@ public class ConsoleView {
                 b.getVez()+1);
     }
 
-    private IAcao pedirAcao(Batalha1x1Generica batalha) {
+    private IAcao pedirAcao(IBatalha batalha) {
         System.out.println("Digite \n 0 para ataque\n 1 para item");
         int opcao = sc.nextInt();
         sc.nextLine();
