@@ -43,7 +43,7 @@ public class Monge extends AbstractPersonagem {
 
     @Override
     public AbstractAtaque atacar() {
-        return new AtaqueFisico((this.foco / 2) + this.getForca() / 2);
+        return new AtaqueFisico(((this.foco / 2) + (this.getForca() / 2)) * 2);
     }
 
     @Override
