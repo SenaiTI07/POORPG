@@ -54,4 +54,17 @@ public class Monge extends AbstractPersonagem {
         return dano;
     }
 
+    @Override
+    public int getDef(int tipoAtaque) {
+       if (tipoAtaque == IAtaque.FISICO){
+           int def = (int) (this.getForca() / 2+(Math.random() * this.getFoco()));
+           return def;
+       }
+        
+       int def = (int) (this.getForca() / 2+(Math.random() * this.getFoco()));
+       return def;
+       
+       
+    }
+
 }
