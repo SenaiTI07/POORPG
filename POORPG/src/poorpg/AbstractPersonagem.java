@@ -14,9 +14,7 @@ import poorpg.batalha.acao.AbstractAtaque;
 public abstract class AbstractPersonagem
         implements IPersonagem {
 
-    int tipo;
-
-    private int hp, forca, destreza, inteligencia, level;
+    private int tipo, hp, forca, destreza, inteligencia, level;
     private String nome;
 
     public AbstractPersonagem(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
