@@ -38,7 +38,7 @@ public class Guerreiro extends AbstractPersonagem {
 
 
     public Guerreiro(){
-        super(GUERREIRO,100,60,50,20,5,"DesertoNegro");
+        super(GUERREIRO,100,6,5,2,5,"DesertoNegro");
     }
 
 
