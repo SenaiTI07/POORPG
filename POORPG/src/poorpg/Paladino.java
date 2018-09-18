@@ -1,5 +1,6 @@
 package poorpg;
 
+import java.util.Random;
 import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.batalha.acao.AtaqueFisico;
 import poorpg.batalha.acao.IAtaque;
@@ -30,8 +31,20 @@ public class Paladino extends AbstractPersonagem {
 
     @Override
     public int receberAtaque(IAtaque a) {
-        int dano = a.getQuantidade() - this.getForca();
+        int dano = a.getQuantidade() - this.getDef(a.getTipoAtaque());
         this.setHP(this.getHP() - dano);
         return dano;
+    }
+
+    @Override
+    public int getDef(int tipoAtaque) {
+        Random rand = new Random();
+        if (tipoAtaque == IAtaque.FISICO) {
+            int def = ((this.getForca() / 2) + (int) Math.round(Math.random() * this.getInteligencia()));
+            return def;
+        } else if (tipoAtaque == IAtaque.MAGICO) {
+            int def = ((this.getForca() / 2) + (int) Math.round(Math.random() * this.getInteligencia()));
+        }
+        return 0;
     }
 }

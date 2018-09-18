@@ -18,6 +18,8 @@ public class Arqueiro extends AbstractPersonagem {
     
     int evasao;
     int penetracaoMagica;
+    private int armaduraFisica;
+    private int resistenciaMagica;
 
     public Arqueiro(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, level, nome);
@@ -41,5 +43,17 @@ public class Arqueiro extends AbstractPersonagem {
     
     public Arqueiro(){
         super(ARQUEIRO,100,6,10,4,10,"SoulBeast");
+    }
+
+    @Override
+    public int getDef(int tipoAtaque) {
+       Random math = new Random();
+       
+        if (tipoAtaque == 0){
+            this.armaduraFisica = (int)(this.getDestreza() / 2 + math.random() * (this.getForca()));
+        }else{
+            this.resistenciaMagica = (int)(this.getDestreza() / 2 + math.random() * (this.getHP()));
+        }
+        return 0;
     }
 }
