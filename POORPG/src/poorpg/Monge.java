@@ -48,7 +48,10 @@ public class Monge extends AbstractPersonagem {
 
     @Override
     public int receberAtaque(IAtaque a) {
-        return a.getQuantidade() - this.getForca();
+        
+        int dano = a.getQuantidade() - this.getForca();
+        this.setHP(this.getHP() - dano);
+        return dano;
     }
 
 }
