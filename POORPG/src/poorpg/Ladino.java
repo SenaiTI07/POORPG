@@ -5,6 +5,9 @@
  */
 package poorpg;
 
+import poorpg.batalha.acao.AtaqueFisico;
+import poorpg.batalha.ataque.AbstractAtaque;
+
 /**
  *
  * @author senai
@@ -17,10 +20,26 @@ public class Ladino extends AbstractPersonagem{
     public Ladino(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
         super(tipo, hp, forca, destreza, inteligencia, level, nome);
     }
+
+    public void RoubarItens (AbstractPersonagem personagem) {
+        
+        
+    }
+    
+    
+    @Override
+    public AbstractAtaque atacar() {
+      return new AtaqueFisico(this.getForca());  
+    }
+
+    public int receberAtaque(AbstractAtaque a) {
+        this.setHP(this.getHP() - a.getQuantidade);
+        return a.getQuantidade();
+    }
     
     
 
-
+    
     
    
     
