@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poorpg.batalha.ataque;
+package poorpg.batalha.acao;
 
 /**
  *
@@ -19,7 +19,7 @@ public class AbstractAtaque implements IAtaque {
     }
 
     @Override
-    public int getTipo() {
+    public int getTipoAtaque() {
         return tipo;
     }
 

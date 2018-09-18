@@ -5,6 +5,8 @@
  */
 package poorpg;
 
+import poorpg.consoleview.ConsoleView;
+
 /**
  *
  * @author senai
@@ -16,7 +18,11 @@ public class POORPG {
      */
     public static void main(String[] args) {
        
-         System.out.println("to na disney");    
+         System.out.println("to na disney");
+         
+         ConsoleView cv = new ConsoleView();
+         cv.iniciar();
+         
     }
     
 }

@@ -5,15 +5,16 @@
  */
 package poorpg.batalha;
 
-import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.AbstractPersonagem;
 
 /**
  *
  * @author senai
  */
-public interface IBatalha1x1 extends IBatalha{
-    int PERSONAGEM1 = 0;
-    int PERSONAGEM2 = 1;
+public class Batalha1x1Generica extends AbstractBatalha1x1{
+    
+    public Batalha1x1Generica(AbstractPersonagem p1, AbstractPersonagem p2) {
+        super(p1, p2);
+    }
     
 }
