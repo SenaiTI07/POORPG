@@ -21,6 +21,7 @@ public interface IPersonagem {
     int NECROMANTE = 5;
     int PALADINO = 6;
     int CLERIGO = 7;
+    int PROFESSOR = 10000;
     /**
      * Cria um AbstractAtaque para alguma batalha
      * @return 
