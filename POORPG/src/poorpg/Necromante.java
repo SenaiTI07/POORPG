@@ -22,7 +22,7 @@ public class Necromante extends AbstractPersonagem {
     }
 
     public Necromante() {
-        super(NECROMANTE, 92, 5, 6, 10, 1, "Necrotério");
+        super(NECROMANTE, 92, 5, 6, 10, 1, "Nekrottério");
         this.mana = 9;
     }
 
