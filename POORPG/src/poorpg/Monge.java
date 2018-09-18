@@ -6,6 +6,7 @@
 package poorpg;
 
 import poorpg.batalha.acao.AbstractAtaque;
+import poorpg.batalha.acao.AtaqueFisico;
 
 /**
  *
@@ -13,30 +14,40 @@ import poorpg.batalha.acao.AbstractAtaque;
  */
 public class Monge extends AbstractPersonagem {
 
+    public int getFoco() {
+        return foco;
+    }
+
+    public void setFoco(int foco) {
+        this.foco = foco;
+    }
+
     private int foco;
 
 
 
-    public Monge(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome) {
+    public Monge(int tipo, int hp, int forca, int destreza, int inteligencia, int level, String nome, int foco) {
         super(tipo, hp, forca, destreza, inteligencia, level, nome);
+        this.foco = foco;
     }
     
     public Monge(){
-        super(0, 85, 60, 90, 100, 1, "gregão");
+        super(MONGE, 85, 6, 9, 10, 1, "gregão");
+        this.foco = 6;
     }
 
-    public void curaPropia() {
-        
+    public int curaPropia() {
+        return this.getHP() + 5;
     }
 
     @Override
     public AbstractAtaque atacar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return new AtaqueFisico((this.foco / 2) + this.getForca() / 2);
     }
 
     @Override
     public int receberAtaque(AbstractAtaque a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return a.getQuantidade() - this.getForca();
     }
 
 }
