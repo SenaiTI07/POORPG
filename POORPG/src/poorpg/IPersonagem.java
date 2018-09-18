@@ -46,4 +46,5 @@ public interface IPersonagem {
     void setTipo(int tipo);
     int getLevel();
     void setLevel(int level);
+    int getDef();
 }
