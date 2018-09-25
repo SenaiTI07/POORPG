@@ -33,19 +33,19 @@ public class Necromante extends AbstractPersonagem {
 
     @Override
     public int receberAtaque(IAtaque a) {
-        int dano = a.getQuantidade() - this.getForca();
+        int dano = this.getDef(a.getTipoAtaque()) - a.getQuantidade();
         this.setHP(this.getHP() - dano);
         return dano;
     }
 
     @Override
     public int getDef(int tipoAtaque) {
-        if (tipoAtaque == IAtaque.FISICO){
-            int def = (this.getForca() / 2 +(int) Math.round(Math.random() * this.getLevel()));
+        if (tipoAtaque == IAtaque.FISICO) {
+            int def = (this.getForca() / 2 + (int) Math.round(Math.random() * this.getLevel()));
             return def;
         }
-        
-        int def = (this.getInteligencia() / 2 +(int)Math.round(Math.random() * this.getDestreza()));
+
+        int def = (this.getInteligencia() / 2 + (int) Math.round(Math.random() * this.getDestreza()));
         return def;
     }
 }
