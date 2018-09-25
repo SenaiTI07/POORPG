@@ -39,6 +39,11 @@ public class Ladino extends AbstractPersonagem{
         return a.getQuantidade();
     }
 
+    @Override
+    public int getDef(int tipoAtaque) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
    
     
