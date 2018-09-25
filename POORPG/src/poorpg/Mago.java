@@ -5,6 +5,7 @@
  */
 package poorpg;
 
+import java.util.Random;
 import poorpg.batalha.acao.AbstractAtaque;
 import poorpg.batalha.acao.AtaqueFisico;
 import poorpg.batalha.acao.AtaqueMagico;
@@ -42,15 +43,23 @@ public class Mago extends AbstractPersonagem {
         return new AtaqueMagico(((this.mana) + (this.getForca() / 2)) * 2);
     }
 
-     public int Defesa(int tipoAtaque){
-        return (magic /2 + (int) math.round(math.randow() * magic ));
-    }
-   
     public int receberAtaque(IAtaque a) {
         int dano = a.getQuantidade() - (this.getForca());
-        if(dano >= 0){
-            setHP(getHP()-dano);
+        if (dano >= 0) {
+            setHP(getHP() - dano);
         }
         return dano;
+    }
+
+    @Override
+    public int getDef(int tipoAtaque) {
+        Random math = new Random();
+
+        if (tipoAtaque == 0) {
+            return (this.getInteligencia() + (int) Math.round((Math.random() * this.getDestreza())));
+        } else {
+            return (this.getInteligencia() + (int) Math.round((Math.random() * this.getHP())));
+        }
+
     }
 }
