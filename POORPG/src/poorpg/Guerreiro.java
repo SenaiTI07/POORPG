@@ -42,12 +42,14 @@ public class Guerreiro extends AbstractPersonagem {
 
     @Override
     public int getDef(int tipoAtaque) {
-        int defesa;
-        Random math = new Random();
+       
+        
+        if(tipoAtaque == 0){
+        return   (this.getForca() + (int) Math.round((Math.random() * this.getDestreza())));
+    } else 
+        return   (this.getForca() + (int) Math.round((Math.random() * this.getHP())));
 
-        defesa = this.getForca() + (int) math.nextInt(10) + (math.nextInt(10) * this.getDestreza());
-
-        return defesa;
     }
+    
 
 }
