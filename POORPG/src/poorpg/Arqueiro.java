@@ -50,10 +50,12 @@ public class Arqueiro extends AbstractPersonagem {
        Random math = new Random();
        
         if (tipoAtaque == 0){
-            this.armaduraFisica = (int)(this.getDestreza() / 2 + math.random() * (this.getForca()));
+            return (this.armaduraFisica + this.getDestreza() + (int)Math.round((Math.random() * this.getForca())));
+            
         }else{
-            this.resistenciaMagica = (int)(this.getDestreza() / 2 + math.random() * (this.getHP()));
+            return (this.resistenciaMagica + this.getDestreza() + (int)Math.round((Math.random() * this.getHP())));
+            
         }
-        return 0;
+        
     }
 }
